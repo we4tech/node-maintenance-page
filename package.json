@@ -2,7 +2,7 @@
 , "description" : "Turn on/off maintenance page while working on production server."
 , "url": "https://github.com/we4tech/node-maintenance-page"
 , "keywords": ["maintenance", "page", "command", "shell"]
-, "version" : "0.1.0"
+, "version" : "0.1.1"
 , "dependencies": {
     "optparse": ">=1.0"
   , "node-static": ">=0.5.6"
@@ -13,6 +13,6 @@
 , "engines" : { "node" : ">=0.4" }
 , "repository": {
     "type" : "git"
-  , "url" : "git@github.com:we4tech/node-maintenance-page.git"
+  , "url" : "https://github.com/we4tech/node-maintenance-page"
   }
 }

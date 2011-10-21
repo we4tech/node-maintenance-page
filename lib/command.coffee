@@ -8,6 +8,7 @@ config =
   serverPort: 80
   serverHost: '0.0.0.0'
   mountPath: null
+  defaultPage: 'index.html'
 
 # Define options
 switches = [
@@ -15,6 +16,7 @@ switches = [
   , ['-P', '--port NUMBER', 'Server port, by default 80']
   , ['-H', '--host HOST', 'Server host, by default 0.0.0.0']
   , ['-m', '--mount-dir FILE', 'Server directory from where index.html and related resources will be served, Required']
+  , ['-d', '--default-page FILE', 'Default file, by default index.html']
 ]
 
 parser = new optParse.OptionParser(switches)
@@ -30,6 +32,10 @@ parser.on 'host', (arg, value) ->
 # Handle mount dir
 parser.on 'mount-dir', (arg, value) ->
   config.mountPath = value
+
+# Handle default page
+parser.on 'default-page', (arg, value) ->
+  config.defaultPage = value
 
 # Handle help
 parser.on 'help', ->

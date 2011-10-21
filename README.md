@@ -20,3 +20,11 @@ Available options:
 
 	*	-m, --mount-dir FILE   Server directory from where index.html and related resources will be served, Required
 	
+
+Changes
+=======
+
+* v-0.1.1 - Fixed issue with not showing up page if request url is not "/" .
+Now it will be forced to index.html (by default) or use -d argument to set different page
+
+

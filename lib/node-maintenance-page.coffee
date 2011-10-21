@@ -29,6 +29,9 @@ class Server
   startServing: ->
     sys.puts 'Starting server...'
     http.createServer((request, response) =>
+      console.log("Original request - #{request.url}")
+      request.url = @config.defaultPage
+
       @handleServerRequest(request, response)
     ).listen(@config.serverPort, @config.serverHost)
     sys.puts 'Server started.'
