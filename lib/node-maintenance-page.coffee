@@ -29,8 +29,8 @@ class Server
   startServing: ->
     sys.puts 'Starting server...'
     http.createServer((request, response) =>
-      console.log("Original request - #{request.url}")
-      request.url = @config.defaultPage
+      if !request.url.match(/gif|jpg|jpeg|swf|png|css|js|bmp|ico/i)
+        request.url = @config.defaultPage
 
       @handleServerRequest(request, response)
     ).listen(@config.serverPort, @config.serverHost)
