@@ -1,8 +1,7 @@
 # Include global required libraries
 fs = require 'fs'
-sys = require 'sys'
 path = require 'path'
-util = require 'util'
+sys = util = require 'util'
 http = require 'http'
 static = require 'node-static'
 

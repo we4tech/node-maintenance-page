@@ -4,7 +4,7 @@
 , "keywords": ["maintenance", "page", "command", "shell"]
 , "version" : "0.1.2"
 , "dependencies": {
-    "optparse": ">=1.0"
+    "optparse": ">=1.0.3"
   , "node-static": ">=0.5.6"
   }
 , "author" : "Nhm Tanveer Hossain Khan <hasan@welltreat.us>"

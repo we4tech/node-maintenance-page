@@ -1,4 +1,3 @@
-sys = require('sys')
 util = require('util')
 optParse = require('optparse')
 maintenancePage = require('../lib/node-maintenance-page')
@@ -39,9 +38,9 @@ parser.on 'default-page', (arg, value) ->
 
 # Handle help
 parser.on 'help', ->
-  sys.puts(parser.toString());
+  util.puts(parser.toString());
 
-parser.parse process.ARGV
+parser.parse process.argv
 
 # Kick start maintenance page
 mServer = new maintenancePage.Server config
